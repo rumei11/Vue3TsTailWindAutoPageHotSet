@@ -7,14 +7,14 @@ type imgObj = {
 const imgBase64 = (obj: imgObj): Promise<{ base64: string }> => {
     return new Promise((resolve, reject) => {
         onMounted(() => {
-            let imgDom = document.getElementById(obj.$el) as HTMLImageElement;
+            let imgDomimgDom = document.getElementById(obj.$el) as HTMLImageElement;
 
-            imgDom.onload = _ => {
+            imgDomimgDom.onload = _ => {
                 let canavsEl = document.createElement('canvas');
                 let ctx = canavsEl.getContext('2d')
-                canavsEl.width = imgDom.width;
-                canavsEl.height = imgDom.height;
-                ctx?.drawImage(imgDom, 0, 0, imgDom.width, imgDom.height)
+                canavsEl.width = imgDomimgDom.width;
+                canavsEl.height = imgDomimgDom.height;
+                ctx?.drawImage(imgDomimgDom, 0, 0, imgDomimgDom.width, imgDomimgDom.height)
 
                 resolve({
                     base64: canavsEl.toDataURL('image/png')
