@@ -12,6 +12,8 @@ import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 import Inspect from "vite-plugin-inspect";
+import WindiCSS from 'vite-plugin-windicss'
+
 const pathSrc = path.resolve(__dirname, "src");
 /**
  * autoImport({
@@ -27,6 +29,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
+    WindiCSS(),
     visualizer({ open: true }),
     AutoImport({
       // Auto import functions from Vue, e.g. ref, reactive, toRef...

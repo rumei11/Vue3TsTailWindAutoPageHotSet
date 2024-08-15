@@ -9,8 +9,7 @@ import mitt from "mitt";
 import "animate.css";
 import Loading from "./components/myLoading/index";
 import myUse from "./plugin/myUse";
-import "@/assets/style/index.css";
-import "@/assets/style/reload.scss";
+import 'virtual:windi.css'
 
 export const app = createApp(App);
 
